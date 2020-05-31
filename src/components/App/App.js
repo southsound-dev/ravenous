@@ -24,11 +24,16 @@ render() {
   return (
     <div className="App">
   <h1>Top Restaurants Around you</h1>
-  <SearchBar />
+  <SearchBar searchYelp={this.searchYelp} />
   <BusinessList businesses={businesses}/>
 </div>
     )
 } 
+
+searchYelp(term,location,best_match) {
+  console.log(`You are searching for ${term}, ${location} and ${best_match}`)
+}
+
 }
 
 
